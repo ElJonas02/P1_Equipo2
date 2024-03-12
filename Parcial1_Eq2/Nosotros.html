@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> <!--Incluir caracteres-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Configuración para dispositivos móviles-->
+        <link rel="icon" href="img/favicon.ico"> <!--Icono de pestaña-->
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link rel="stylesheet" href="Main.css"> <!--Link to style file-->
+        <title>Electrónica Anáhuac</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcyPXi-qvOsiUPoZRE6jHrC-ZyW9XwLiI&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="Menu">
+                <img src="img/leonelectr.png" width="70"> <!--Logo para el Header-->
+                <ul>
+                    <li><a href="MainPage.html"><b>Inicio</b></a></li> <!--TO-DO: Enlazar con otras páginas-->
+                    <li><a href="Nosotros.html"><b>Nosotros</b></a></li> 
+                    <li><a href="#" id="productos" onclick="mostrarBxSliderPopup();"><b>Productos</b></a></li>
+                    <li><a href="#" onclick="mostrarSucursal();"><b>Sucursal</b></a></li>
+                    <li><a href="Contactanos.html"><b>Contáctanos</b></a></li>
+                    <!--<li><a href="#" id="contacto" onclick="mostrarFormulario();">Contáctenos</a></li>-->
+                </ul>
+            </div>
+            <div id="fecha-hora-ubicacion" class="fecha-hora"></div><!--Mostrar fecha y hora usando JavaScript-->
+        </header>
+
+        <section class="contenedor_nos">
+            <div class="titleh2">
+                <img src="img/leonelectr.png" width="70"> <!--Logo para el Header-->
+                <h2>Conoce a nuestro equipo</h2>
+            </div>
+            
+            <div class="equipo">
+                <div class="rectangulo">
+                    <img class="foto" src="img/Joanthan.png" alt="Foto Miembro 1">
+                    <div>
+                        <p class="nombre_n">Jonathan Elian Piña Orlaineta</p>
+                        <br>
+                        <p>Estudiante del octavo semestre de Ingeniería Mecatrónica en la Universidad 
+                            Anáhuac Mayab. Apasionado por la programación en sus diferentes ramas, las 
+                            matemáticas, la música, el fútbol y los videojuegos. Disfruta de hacer actividades 
+                            sencillas, como pasar el rato con familiares y amigos, de una buena comida o café.
+                        </p>
+                    </div>
+                </div>
+                <div class="rectangulo">
+                    <img class="foto" src="img/martin.png" alt="Foto Miembro 2">
+                    <div>
+                        <p class="nombre_n">Martín Morales Hernández</p>
+                        <br>
+                        <p>Estudiante del octavo semestre de Ingeniería Mecatrónica en la Universidad 
+                            Anáhuac Mayab. Entusiasta de la programación y la ingeniería. En su tiempo librarie
+                            disfruta de un buen libro, la buena música y los videojuegos.
+                        </p>
+                    </div>
+                </div>
+                <div class="rectangulo">
+                    <img class="foto" src="img/Pau.png" alt="Foto Miembro 3">
+                    <div>
+                        <p class="nombre_n">Sylvia Paulina Hernández Arceo</p>
+                        <br>
+                        <p>Estudiante del octavo semestre de Ingeniería Mecatrónica en la Universidad 
+                            Anáhuac Mayab. Apasionada de la programación, la robótica y electrónica, 
+                            ha participado en diversos concursos de robótica e ingeniería espacial. 
+                            Su pasión es la danza y es bailarina de danza clásica de profesión. 
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="rectangulo">
+                    <img class="foto" src="img/eduardo.png" alt="Foto Miembro 4">
+                    <div>
+                        <p class="nombre_n">Eduardo Iván Vera Basora</p>
+                        <br>
+                        <p>Estudiante del octavo semestre de Ingeniería Mecatrónica en la Universidad 
+                            Anáhuac Mayab. Apasionado por la programación. Disfruta de la buena música y salir de paseo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer2"><p>&copy; Electronics Mayab 2024</p></footer>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarPopup();">&times;</span>
+                <h2>¿Qué vendemos?</h2>
+                <div class="bxslider">
+                    <div>
+                        <img src="img/Product1.jpg" alt="Componentes Electricos $$$" />
+                        <p class="bx-caption">Componentes Electricos $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product2.jpg" alt="Herramientas $$$" />
+                        <p class="bx-caption">Herramientas $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product3.jpg" alt="Caja de Herramientas $$$" />
+                        <p class="bx-caption">Caja de Herramientas $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product4.jpg" alt="Cables $$$" />
+                        <p class="bx-caption">Cables $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product5.jpg" alt="Cables para conexión $$$" />
+                        <p class="bx-caption">Cables para conexión $$$</p>
+                    </div>
+                </div>
+                <p class="popup-text"><b>Pregunte por disponibilidad. Cel: (999) 984 4812</b></p>
+            </div>
+        </div>
+    
+        <div id="modal-sucursal" class="modal">
+            <div class="modal-content-sucursal">
+                <span class="close" onclick="cerrarPopup();">&times;</span>
+                <h2>¡Ven a nuestra sucursal!</h2>
+                <div id="mapa"></div>
+                <div class="direccion-horarios">
+                    <div>
+                        <h3>Dirección:</h3>
+                        <p>Edificio 3, Universidad Anáhuac Mayab, Mérida, Yuc. C.P.: 97302</p>
+                    </div>
+                    <div>
+                        <h3>Horarios:</h3>
+                        <p>Lunes a Viernes: 9:00 - 19:00</p>
+                        <p>Sábados: 10:00 - 14:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="JavaSFinal.js"></script>
+    </body>
+</html>

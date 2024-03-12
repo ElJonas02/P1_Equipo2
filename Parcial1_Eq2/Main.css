@@ -1,0 +1,461 @@
+/********** ESTILOS PRINCIPALES **********/
+body {
+    background: white;
+    font-family: Arial, sans-serif, Helvetica;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 80px; /* Especifica el alto deseado */
+    width: cover; /* Ocupar todo el ancho */
+    background: black;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Necesario para z-index */
+    z-index: 0; /* Mostrar abajo */
+}
+
+.fecha-hora{ 
+    margin-top: 20px;
+    position: absolute;
+
+    top: 0.5%;
+    left: 5%; 
+
+    color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Se mostrará encima */
+}
+
+.Menu {
+    background: black; /* Fondo negro */
+    list-style: none;
+    width: 100%; /* Ocupar todo el ancho */
+    margin: 0; /* Sin margen */
+    text-align: right; /* Alinear texto a la derecha */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.Menu img {
+    margin: 0;
+    position: absolute;
+    top: 0.5%;
+    left: 50%; 
+}
+
+.Menu li {
+    display: inline-block;
+    color: white; /* Letras blancas */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.Menu a {
+    text-decoration: none;
+    color: white; /* Letras blancas */
+    padding: 10px; 
+}
+
+.Menu a:hover {
+    color: #FEA001; /* Cambiar color al pasar el mouse */
+}
+
+/********** ESTILOS MAIN **********/
+.Intro {
+    background: url('img/IMG1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Cubrir completamente el contenedor */
+    background-attachment: scroll;
+    background-position: center 60%;
+    margin: 0;
+    padding: 25px;
+    width: 100%;
+    height: 500px;
+    color: white;
+    display: flex; /* Convertir a contenedor flex */
+    align-items: flex-end; /* Alinear contenido hacia abajo */
+}
+
+.Objetivo{
+    margin: 0;
+    padding: 25px; 
+    height: 500px;
+}
+
+.Text{
+    float: right; /* Flotar la imagen a la izquierda */
+    width: 50%;
+}
+
+.Imgs {
+    float: left; /* Flotar el contenedor a la izquierda */
+    width: 23%;
+    margin-right: 5px;
+    padding: 0;
+    height: 100%; /* Altura completa dentro del contenedor */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.Imgs img {
+    width: 100%; /* Ancho completo dentro del contenedor */
+    height: 100%; /* Altura completa dentro del contenedor */
+    object-fit: cover; /* Recorta y cubre el contenedor */
+}
+
+.Img2{
+    float: left; /* Flotar la segunda imagen a la izquierda */
+    width: 25%; /* Ancho del 25 al 50% */
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #FEA001; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-weight: bold; /* Letra negrita */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+/********** ESTILO FOOTER **********/
+footer {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    height: 100px; /* Especifica el alto deseado */
+    background: black;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Letras blancas */
+    font-size: 12px; /* Tamaño de la fuente */
+    text-align: center;
+    position: relative; /* Posición relativa */
+}
+
+/**********  ESTILOS VENTANAS EMERGENTES **********/
+.bxslider {
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 450px; /* Ancho fijo del bxSlider */
+    height: 275px; /* Alto fijo del bxSlider */
+    text-align: center; /* Alinear contenido al centro */
+    overflow: hidden; /* Ocultar contenido que exceda el tamaño del bxSlider */
+}
+
+.bxslider img {
+    max-width: 450px;
+    height: 275px;
+}
+
+.bx-wrapper {
+    margin: 0 auto;
+    width: 450px; /* Ancho del slider */
+}
+
+.bx-wrapper img {
+    width: 450px;
+    height: 275px;
+}
+
+.bx-caption {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+/********** ESTILOS MODAL **********/
+.modal {
+    display: none; /* Ocultar modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    
+}
+
+.bxslider{
+    color: white; /* Letras blancas */
+    font-weight: bold; /* Letra negrita */
+    font-size: 10px; /* Tamaño de la fuente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centrar modal verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/********** ESTILOS SUCURSAL **********/
+#modal-sucursal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-sucursal {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content-sucursal h2 {
+    margin-top: 0;
+}
+
+.direccion-horarios {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.direccion-horarios div {
+    flex: 1;
+    padding: 0 10px;
+}
+
+/********** ESTILOS MAPA **********/
+#mapa {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 300px; /* Adjust this value as needed */
+}
+
+/********** ESTILOS SLIDER **********/
+.bxslider {
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 450px; /* Ancho fijo del bxSlider */
+    height: 275px; /* Alto fijo del bxSlider */
+    text-align: center; /* Alinear contenido al centro */
+    overflow: hidden; /* Ocultar contenido que exceda el tamaño del bxSlider */
+}
+
+.bxslider img {
+    max-width: 450px; 
+    height: 275px; 
+}
+
+.bx-wrapper {
+    margin: 0 auto;
+    width: 450px; /* Ancho del slider */
+}
+
+.bx-wrapper img {
+    width: 450px;
+    height: 275px;
+}
+
+.bx-caption {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+/********** ESTILOS FORMULARIO **********/
+.footer2 { 
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    height: 40px; /* Especifica el alto deseado */
+    background: black;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Letras blancas */
+    font-size: 12px; /* Tamaño de la fuente */
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenedor_form {
+    width: 600px;
+    margin: 40px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formulario .contenedor-inputs {
+    padding: 20px;
+    background: #000000;
+    border-radius: 6px 6px 0 0;
+}
+
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.contenedor-inputs textarea {
+    display: block;
+    width: 95%;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    border:none;
+    border-bottom: 2px solid #ccc;
+    font-family: 'Arial';
+    font-size: 16px;
+}
+
+.contenedor-inputs select {
+    display: block;
+    width: 98.5%;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    border:none;
+    font-family: 'Arial';
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus {
+    border-bottom: 2px solid #f8b748;
+}
+  
+.formulario .terminos {
+    text-align: center;
+    color: #424242;
+}
+
+.formulario .terminos label {
+    margin-left: 10px;
+}
+
+.formulario .error {
+    display: none;
+    margin-top: 20px;
+    border-radius: 3px;
+    background: #f8b748;
+    color: #ffffff;
+    padding: 15px 10px;
+    padding-left: 40px;
+}
+
+.formulario .btn {
+    width: 100%;
+    text-align: center;
+    background: #FEA001;
+    color: #fff;
+    border: none;
+    display: block;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 0 0 6px 6px;
+    font-family: 'Arial 27px', serif;
+    font-size: 18px;
+}
+    
+.formulario .btn:hover {
+    background: #ff7b00;
+}
+
+/********** ESTILOS PAG NOSOTROS **********/
+.titleh2{
+    position: absolute;
+    top: 130px;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    height: 0px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.equipo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas de igual ancho */
+    grid-template-rows: 400px;
+    gap: 0px; /* Espacio entre columnas */
+    padding: 30px;
+    align-items: center;
+}
+
+.rectangulo{
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.equipo img {
+    height: 200px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nombre_n{
+    color:#ff7b00;
+    font-weight: bold;
+
+}

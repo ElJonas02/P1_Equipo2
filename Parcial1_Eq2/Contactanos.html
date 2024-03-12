@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> <!--Incluir caracteres-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Configuración para dispositivos móviles-->
+        <link rel="icon" href="img/favicon.ico"> <!--Icono de pestaña-->
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link rel="stylesheet" href="Main.css"> <!--Link to style file-->
+        <title>Electrónica Anáhuac</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcyPXi-qvOsiUPoZRE6jHrC-ZyW9XwLiI&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="Menu">
+                <img src="img/leonelectr.png" width="70"> <!--Logo para el Header-->
+                <ul>
+                    <li><a href="MainPage.html"><b>Inicio</b></a></li> <!--TO-DO: Enlazar con otras páginas-->
+                    <li><a href="Nosotros.html"><b>Nosotros</b></a></li> 
+                    <li><a href="#" id="productos" onclick="mostrarBxSliderPopup();"><b>Productos</b></a></li>
+                    <li><a href="#" onclick="mostrarSucursal();"><b>Sucursal</b></a></li>
+                    <li><a href="Contactanos.html"><b>Contáctanos</b></a></li>
+                    <!--<li><a href="#" id="contacto" onclick="mostrarFormulario();">Contáctenos</a></li>-->
+                </ul>
+            </div>
+            <div id="fecha-hora-ubicacion" class="fecha-hora"></div><!--Mostrar fecha y hora usando JavaScript-->
+        </header>
+
+        <section class="contenedor_form">
+            <form action="" class="formulario" id="formulario" name="formulario">
+                <div class="contenedor-inputs">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="email" name="correo" id="correo" placeholder="Correo electrónico">
+                    
+                    <div class="consulta">
+                        <select id="tipo" name="tipo">
+                            <option value="Dudas">Dudas</option>
+                            <option value="Asesorías">Asesorías</option>
+                            <option value="Informes sobre vacantes">Informes sobre vacantes</option>
+                        </select><br>
+                    </div>
+                
+                    <div class="msj">
+                        <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea><br>
+                    </div>
+                
+                    <div class="terminos">
+                        <input type="checkbox" name="terminos" id="terminos">
+                        <label for="terminos"><b>Deseo recibir información y promociones</b></label>
+                    </div>
+                
+                    <ul class="error" id="error"></ul>
+                </div>
+                
+            <input type="submit" class="btn" value="Enviar">
+            </form>
+        </section>
+
+        <footer class="footer2"><p>&copy; Electronics Mayab 2024</p></footer>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarPopup();">&times;</span>
+                <h2>¿Qué vendemos?</h2>
+                <div class="bxslider">
+                    <div>
+                        <img src="img/Product1.jpg" alt="Componentes Electricos $$$" />
+                        <p class="bx-caption">Componentes Electricos $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product2.jpg" alt="Herramientas $$$" />
+                        <p class="bx-caption">Herramientas $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product3.jpg" alt="Caja de Herramientas $$$" />
+                        <p class="bx-caption">Caja de Herramientas $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product4.jpg" alt="Cables $$$" />
+                        <p class="bx-caption">Cables $$$</p>
+                    </div>
+                    <div>
+                        <img src="img/Product5.jpg" alt="Cables para conexión $$$" />
+                        <p class="bx-caption">Cables para conexión $$$</p>
+                    </div>
+                </div>
+                <p class="popup-text"><b>Pregunte por disponibilidad. Cel: (999) 984 4812</b></p>
+            </div>
+        </div>
+    
+        <div id="modal-sucursal" class="modal">
+            <div class="modal-content-sucursal">
+                <span class="close" onclick="cerrarPopup();">&times;</span>
+                <h2>¡Ven a nuestra sucursal!</h2>
+                <div id="mapa"></div>
+                <div class="direccion-horarios">
+                    <div>
+                        <h3>Dirección:</h3>
+                        <p>Edificio 3, Universidad Anáhuac Mayab, Mérida, Yuc. C.P.: 97302</p>
+                    </div>
+                    <div>
+                        <h3>Horarios:</h3>
+                        <p>Lunes a Viernes: 9:00 - 19:00</p>
+                        <p>Sábados: 10:00 - 14:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="JavaSFinal.js"></script>
+    
+    </body>
+</html>
